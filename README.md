@@ -32,11 +32,11 @@ Or install it yourself as:
 
 Verifying an invalid email, the return will be an array with message and its validation inside, this will occur for all the desired validations.
 
-    validation_contract.is_email('teste.com', 'This email is invalid') => "{message: 'This email is invalid'}"
+    validation_contract.email_valid('teste.com', 'This email is invalid') => "{message: 'This email is invalid'}"
 
 By checking a valid email, nothing will be added in the return, leaving only the validations that are with incorrect values.
 
-    validation_contract.is_email('teste@teste.com', 'This email is invalid') => "nil"
+    validation_contract.email_valid('teste@teste.com', 'This email is invalid') => "nil"
 
 Suggestion for the validations. Perform all the necessary validations and then before executing the desired process use the following:
 
@@ -48,18 +48,18 @@ This will check if there is any invalid field, if there is an arry returned with
 
 ## Validations
 
-| Validation      | Example                                             | Done  |
-| -------------   |:---------------------------------------------------:| -----:|
-| is_required     | validate if field is required                       |   V   |
-| has_min_len     | check if the field has a minimum of characters      |   V   |
-| has_max_len     | checks if the field has a maximum of characters     |   V   |
-| is_fixed_len    | checks if there is an x quantity of                 |   V   |
-| is_email        | heck if email is valid                              |   V   |
-| is_greater_than | valid if one number is greater than another         |   V   |
-| is_lower_than   | valid if one number is smaller than another         |   V   |
-| errors          | Return errors                                       |   V   |
-| clear           | Clears the arry error                               |   V   |
-| is_valid        | Check whether this arry is valid or not             |   V   |
+| Validation         | Example                                             | Done  |
+| -------------------|:---------------------------------------------------:| -----:|
+| required           | validate if field is required                       |   V   |
+| has_min_len        | check if the field has a minimum of characters      |   V   |
+| has_max_len        | checks if the field has a maximum of characters     |   V   |
+| fixed_len          | checks if there is an x quantity of                 |   V   |
+| email_valid        | heck if email is valid                              |   V   |
+| greater_than       | valid if one number is greater than another         |   V   |
+| lower_than         | valid if one number is smaller than another         |   V   |
+| errors             | Return errors                                       |   V   |
+| clear              | Clears the arry error                               |   V   |
+| is_valid           | Check whether this arry is valid or not             |   V   |
 
 ## Contributing
 
